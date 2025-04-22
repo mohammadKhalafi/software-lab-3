@@ -9,14 +9,13 @@ public class AccountBalanceCalculator {
 
     // Method to calculate balance based on transactions
     public static int calculateBalance(List<Transaction> transactions) {
-
-        if (transactions == null) return 0;
-
         int balance = 0;
         for (Transaction t : transactions) {
             if (t.getType() == TransactionType.DEPOSIT) {
                 balance += t.getAmount();
             } else if (t.getType() == TransactionType.WITHDRAWAL) {
+                if (balance - t.getAmount() < 0)
+                    throw new IllegalStateException("Balance cannot be negative!");
                 balance -= t.getAmount();
             }
             addTransaction(t);
