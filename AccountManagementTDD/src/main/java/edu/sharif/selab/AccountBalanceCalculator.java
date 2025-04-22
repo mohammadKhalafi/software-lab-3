@@ -19,7 +19,7 @@ public class AccountBalanceCalculator {
             } else if (t.getType() == TransactionType.WITHDRAWAL) {
                 balance -= t.getAmount();
             }
-
+            addTransaction(t);
         }
         return balance;
     }

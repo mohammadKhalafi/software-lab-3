@@ -83,25 +83,25 @@ public class AccountBalanceCalculatorTest {
 
 
 
-//    @Test
-//    void testTransactionHistoryAfterDeposits() {
-//        // Perform deposits
-//        List<Transaction> transactions = Arrays.asList(
-//                new Transaction(TransactionType.DEPOSIT, 100),
-//                new Transaction(TransactionType.DEPOSIT, 200)
-//        );
-//
-//        // Calculate balance, which will also add transactions to the history
-//        AccountBalanceCalculator.calculateBalance(transactions);
-//
-//        // Ensure the transaction history contains the correct transactions
-//        List<Transaction> history = AccountBalanceCalculator.getTransactionHistory();
-//        assertEquals(2, history.size(), "Transaction history should contain 2 transactions");
-//
-//        // Check if the transactions are correctly recorded
-//        assertTrue(history.containsAll(transactions), "Transaction history should contain both deposit transactions");
-//    }
-//
+    @Test
+    void testTransactionHistoryAfterDeposits() {
+        // Perform deposits
+        List<Transaction> transactions = Arrays.asList(
+                new Transaction(TransactionType.DEPOSIT, 100),
+                new Transaction(TransactionType.DEPOSIT, 200)
+        );
+
+        // Calculate balance, which will also add transactions to the history
+        AccountBalanceCalculator.calculateBalance(transactions);
+
+        // Ensure the transaction history contains the correct transactions
+        List<Transaction> history = AccountBalanceCalculator.getTransactionHistory();
+        assertEquals(2, history.size(), "Transaction history should contain 2 transactions");
+
+        // Check if the transactions are correctly recorded
+        assertTrue(history.containsAll(transactions), "Transaction history should contain both deposit transactions");
+    }
+
 //    @Test
 //    void testTransactionHistoryAfterDepositsAndWithdrawals() {
 //        // Perform deposits and withdrawals
@@ -121,7 +121,7 @@ public class AccountBalanceCalculatorTest {
 //        // Check if the transactions are correctly recorded
 //        assertTrue(history.containsAll(transactions), "Transaction history should contain all deposit and withdrawal transactions");
 //    }
-//
+
 //    @Test
 //    void testTransactionHistoryShouldContainOnlyLastCalculationTransactions() {
 //        // Perform first calculation with some transactions
