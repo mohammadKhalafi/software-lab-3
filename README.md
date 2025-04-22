@@ -48,7 +48,7 @@ calculateBalance
 تست سوم را از حالت کامنت خارج و تست ها را اجرا کردیم. مشاهده می شود که تست آخر fail می شود: 
 
 
-![Screenshot 2025-04-22 155956](https://github.com/user-attachments/assets/efc6c1e5-3879-4961-9fa8-fd0a089ac158)
+![img_6.png](img_6.png)
 
 
 ### علت شکست تست:
@@ -95,7 +95,7 @@ public static int calculateBalance(List<Transaction> transactions) {
 
 مجددا تست ها را ران می کنیم و مشاهده می شود که تست آخر این بار با اعمال تغییرات گفته شده، پاس شد.
 
-![Screenshot 2025-04-22 162209](https://github.com/user-attachments/assets/42bdeefe-8336-45cd-88fc-2f8048a69f30)
+![img_7.png](img_7.png)
 
 
 
