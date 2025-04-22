@@ -102,25 +102,25 @@ public class AccountBalanceCalculatorTest {
         assertTrue(history.containsAll(transactions), "Transaction history should contain both deposit transactions");
     }
 
-//    @Test
-//    void testTransactionHistoryAfterDepositsAndWithdrawals() {
-//        // Perform deposits and withdrawals
-//        List<Transaction> transactions = Arrays.asList(
-//                new Transaction(TransactionType.DEPOSIT, 200),
-//                new Transaction(TransactionType.WITHDRAWAL, 50),
-//                new Transaction(TransactionType.DEPOSIT, 100)
-//        );
-//
-//        // Calculate balance
-//        AccountBalanceCalculator.calculateBalance(transactions);
-//
-//        // Ensure the transaction history contains the correct transactions
-//        List<Transaction> history = AccountBalanceCalculator.getTransactionHistory();
-//        assertEquals(3, history.size(), "Transaction history should contain 3 transactions");
-//
-//        // Check if the transactions are correctly recorded
-//        assertTrue(history.containsAll(transactions), "Transaction history should contain all deposit and withdrawal transactions");
-//    }
+    @Test
+    void testTransactionHistoryAfterDepositsAndWithdrawals() {
+        // Perform deposits and withdrawals
+        List<Transaction> transactions = Arrays.asList(
+                new Transaction(TransactionType.DEPOSIT, 200),
+                new Transaction(TransactionType.WITHDRAWAL, 50),
+                new Transaction(TransactionType.DEPOSIT, 100)
+        );
+
+        // Calculate balance
+        AccountBalanceCalculator.calculateBalance(transactions);
+
+        // Ensure the transaction history contains the correct transactions
+        List<Transaction> history = AccountBalanceCalculator.getTransactionHistory();
+        assertEquals(3, history.size(), "Transaction history should contain 3 transactions");
+
+        // Check if the transactions are correctly recorded
+        assertTrue(history.containsAll(transactions), "Transaction history should contain all deposit and withdrawal transactions");
+    }
 
 //    @Test
 //    void testTransactionHistoryShouldContainOnlyLastCalculationTransactions() {
